@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>KSS: Living Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <header class="kss-header">
+          <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
+        </header>
+        <nav class="kss-nav">
+          <ul class="kss-menu" data-kss-ref="1">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Modules</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Forms</span></a></li>
+            
+          </ul>
+          
+          <ul class="kss-menu-child">
+            
+            
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Buttons</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Your standard form button</span></a></li>
+            
+            
+          </ul>
+          
+        </nav>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Modules</h1>
+            
+            
+            <div class="kss-description kss-markdown">
+              <p>Reusable elements that can be used across the site.
+So far this just includes buttons.
+
+</p>
+<h2>Markdown Example</h2>
+<p>This is a paragraph. <strong>bold text</strong>, <em>italic text</em>, <a href="#">anchor</a> and <code>code</code>.
+
+</p>
+<blockquote>
+<p>Blockquote paragraph.
+
+</p>
+</blockquote>
+<pre><code>pre &gt; code example</code></pre>
+<ul>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ul>
+<ol>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ol>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Buttons</h1>
+            
+            
+            <div class="kss-description kss-markdown">
+              <p>A majority of buttons in the site are built from the same base class.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <a href="#" class="button {$modifiers}">Link Button</a>
+<button class="button {$modifiers}">Button Element</button>
+<input type="button" class="button {$modifiers}" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.primary</div>
+                  <div class="kss-modifier-description">
+                    <p>Indicate that the button is the primary feature of this form.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="button primary">Link Button</a>
+<button class="button primary">Button Element</button>
+<input type="button" class="button primary" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.remove</div>
+                  <div class="kss-modifier-description">
+                    <p>Indicate that the button will remove a feature, or other negative connotations.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="button remove">Link Button</a>
+<button class="button remove">Button Element</button>
+<input type="button" class="button remove" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Highlight the button when hovered.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="button pseudo-class-hover">Link Button</a>
+<button class="button pseudo-class-hover">Button Element</button>
+<input type="button" class="button pseudo-class-hover" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:disabled</div>
+                  <div class="kss-modifier-description">
+                    <p>Make the button change appearance to reflect it being disabled.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="button pseudo-class-disabled">Link Button</a>
+<button class="button pseudo-class-disabled">Button Element</button>
+<input type="button" class="button pseudo-class-disabled" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:active</div>
+                  <div class="kss-modifier-description">
+                    <p>&quot;Press&quot; the button down when clicked.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="button pseudo-class-active">Link Button</a>
+<button class="button pseudo-class-active">Button Element</button>
+<input type="button" class="button pseudo-class-active" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Your standard form button</h1>
+            
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn {$modifiers}">Link Button</a>
+<button class="btn {$modifiers}">Button Element</button>
+<input type="button" class="btn {$modifiers}" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:hover</div>
+                  <div class="kss-modifier-description">
+                    <p>Highlights when hovering.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn pseudo-class-hover">Link Button</a>
+<button class="btn pseudo-class-hover">Button Element</button>
+<input type="button" class="btn pseudo-class-hover" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:disabled</div>
+                  <div class="kss-modifier-description">
+                    <p>Dims the button when disabled.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn pseudo-class-disabled">Link Button</a>
+<button class="btn pseudo-class-disabled">Button Element</button>
+<input type="button" class="btn pseudo-class-disabled" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.primary</div>
+                  <div class="kss-modifier-description">
+                    <p>Indicates button is the primary action.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn primary">Link Button</a>
+<button class="btn primary">Button Element</button>
+<input type="button" class="btn primary" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.smaller</div>
+                  <div class="kss-modifier-description">
+                    <p>A smaller button</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn smaller">Link Button</a>
+<button class="btn smaller">Button Element</button>
+<input type="button" class="btn smaller" value="input[type='button']"/>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;btn {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;btn {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Copyright &copy; 2013 Tanjo, Hiroyuki. All rights reserved.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="public/rainbow.min.js"></script>
+    <script src="public/main.js"></script>
+  </body>
+</html>
