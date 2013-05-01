@@ -211,3 +211,5 @@ The styleguide should be organized by numbered sections. These sections can go a
       4.2 Diagram tables
 
 The goal here is to create an organizational structure that is flexible, but  rigid enough to be machine processed and referenced inside of documentation.
+
+<a href="https://github.com/htanjo/kss-node-template"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
