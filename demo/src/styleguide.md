@@ -30,6 +30,7 @@ How to apply this template
 kss-node <sourcedir> --template path/to/template
 ```
 
+
 License
 -------
 This template is under the [MIT License](https://github.com/htanjo/kss-node-template/blob/master/LICENSE.txt).
