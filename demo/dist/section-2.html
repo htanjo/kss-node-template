@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>KSS: Living Styleguide</title>
+    <title>kss-node Styleguide</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="kss-node" />
@@ -20,9 +20,11 @@
           <ul class="kss-menu" data-kss-ref="2">
             <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
             
-            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Modules</span></a></li>
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Buttons</span></a></li>
             
-            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Forms</span></a></li>
+            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Tables</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Pagination</span></a></li>
             
           </ul>
           
@@ -32,15 +34,11 @@
             
             
             
-            <li class="kss-menu-item"><a href="#section-2.1"><span class="kss-ref">2.1</span><span class="kss-name">Text Input</span></a></li>
+            <li class="kss-menu-item"><a href="#section-2.1"><span class="kss-ref">2.1</span><span class="kss-name">Table styles</span></a></li>
             
             
             
-            <li class="kss-menu-item"><a href="#section-2.1.1"><span class="kss-ref">2.1.1</span><span class="kss-name">Single-Line Text Boxes</span></a></li>
-            
-            
-            
-            <li class="kss-menu-item"><a href="#section-2.1.2"><span class="kss-ref">2.1.2</span><span class="kss-name">Label/Textbox Pairs</span></a></li>
+            <li class="kss-menu-item"><a href="#section-2.2"><span class="kss-ref">2.2</span><span class="kss-name">Backgrounds</span></a></li>
             
             
           </ul>
@@ -52,12 +50,11 @@
           
           
           <section id="section-2" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">2</span> Forms</h1>
+            <h1 class="kss-title"><span class="kss-ref">2</span> Tables</h1>
             
             
-            <div class="kss-description kss-markdown">
-              <p>Covers styles used for forms, such as the <code>&lt;input&gt;</code> and <code>&lt;select&gt;</code>
-elements.</p>
+            <div class="kss-description">
+              <p>For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
 
             </div>
             
@@ -65,152 +62,342 @@ elements.</p>
           </section>
           
           <section id="section-2.1" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">2.1</span> Text Input</h1>
+            <h1 class="kss-title"><span class="kss-ref">2.1</span> Table styles</h1>
             
             
-            <div class="kss-description kss-markdown">
-              <p>Below are the text-oriented form elements used on the site.</p>
-
-            </div>
-            
-            
-          </section>
-          
-          <section id="section-2.1.1" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">2.1.1</span> Single-Line Text Boxes</h1>
-            
-            
-            <div class="kss-description kss-markdown">
-              <p>Your standard, everyday text boxes.</p>
+            <div class="kss-description">
+              <p>Add any of the following classes to the <code>.table</code> base class.</p>
 
             </div>
             
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <input type="text" class="{$modifiers}" value="Text"/>
+                  <table class="table {$modifiers}">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
               
               <div class="kss-modifier">
                 <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:hover</div>
+                  <div class="kss-modifier-name">.table-striped</div>
                   <div class="kss-modifier-description">
-                    <p>Highlight the text box when hovering</p>
+                    <p>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
 
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <input type="text" class="pseudo-class-hover" value="Text"/>
+                  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
               
               <div class="kss-modifier">
                 <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:focus</div>
+                  <div class="kss-modifier-name">.table-bordered</div>
                   <div class="kss-modifier-description">
-                    <p>Similar to <code>:hover</code>, however it should demand more attention than when an input is simply hovered.</p>
+                    <p>Add borders and rounded corners to the table.</p>
 
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <input type="text" class="pseudo-class-focus" value="Text"/>
+                  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
               
               <div class="kss-modifier">
                 <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:disabled</div>
+                  <div class="kss-modifier-name">.table-hover</div>
                   <div class="kss-modifier-description">
-                    <p>When disabled, the input&apos;s appearance should reflect as such.</p>
+                    <p>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
 
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <input type="text" class="pseudo-class-disabled" value="Text"/>
+                  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.table-condensed</div>
+                  <div class="kss-modifier-description">
+                    <p>Makes tables more compact by cutting cell padding in half.</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;input type=&quot;text&quot; class=&quot;{$modifiers}&quot; value=&quot;Text&quot;/&gt;</code></pre>
+                <pre><code data-language="html">&lt;table class=&quot;table {$modifiers}&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
               </div>
             </div>
             
           </section>
           
-          <section id="section-2.1.2" class="kss-section kss-depth-3">
-            <h1 class="kss-title"><span class="kss-ref">2.1.2</span> Label/Textbox Pairs</h1>
+          <section id="section-2.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.2</span> Backgrounds</h1>
             
             
-            <div class="kss-description kss-markdown">
-              <p>All labelled textboxes should be included in a wrapper <code>&lt;div&gt;</code> element for both layout
-convenience and specific styling.</p>
+            <div class="kss-description">
+              <p>Use contextual classes to color table rows.</p>
 
             </div>
             
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <div class="mod-input text {$modifiers}">
-    <label>Text Label</label>
-    <input type="text" value="Text Input"/>
-</div>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.disabled</div>
-                  <div class="kss-modifier-description">
-                    <p>To be used when the text input inside is expected to be disabled.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <div class="mod-input text disabled">
-    <label>Text Label</label>
-    <input type="text" value="Text Input"/>
-</div>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.invalid</div>
-                  <div class="kss-modifier-description">
-                    <p>To be used if the input has failed a validation check.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <div class="mod-input text invalid">
-    <label>Text Label</label>
-    <input type="text" value="Text Input"/>
-</div>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.valid</div>
-                  <div class="kss-modifier-description">
-                    <p>To be used if the input has passed a validation check (intended for live validation in particular).</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <div class="mod-input text valid">
-    <label>Text Label</label>
-    <input type="text" value="Text Input"/>
-</div>
+                  <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product</th>
+      <th>Payment Taken</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="success">
+      <td>1</td>
+      <td>TB - Monthly</td>
+      <td>01/04/2012</td>
+      <td>Approved</td>
+    </tr>
+    <tr class="error">
+      <td>2</td>
+      <td>TB - Monthly</td>
+      <td>02/04/2012</td>
+      <td>Declined</td>
+    </tr>
+    <tr class="warning">
+      <td>3</td>
+      <td>TB - Monthly</td>
+      <td>03/04/2012</td>
+      <td>Pending</td>
+    </tr>
+    <tr class="info">
+      <td>4</td>
+      <td>TB - Monthly</td>
+      <td>04/04/2012</td>
+      <td>Call in to confirm</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;div class=&quot;mod-input text {$modifiers}&quot;&gt;
-    &lt;label&gt;Text Label&lt;/label&gt;
-    &lt;input type=&quot;text&quot; value=&quot;Text Input&quot;/&gt;
-&lt;/div&gt;</code></pre>
+                <pre><code data-language="html">&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Product&lt;/th&gt;
+      &lt;th&gt;Payment Taken&lt;/th&gt;
+      &lt;th&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class=&quot;success&quot;&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;TB - Monthly&lt;/td&gt;
+      &lt;td&gt;01/04/2012&lt;/td&gt;
+      &lt;td&gt;Approved&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;error&quot;&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;TB - Monthly&lt;/td&gt;
+      &lt;td&gt;02/04/2012&lt;/td&gt;
+      &lt;td&gt;Declined&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;warning&quot;&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;TB - Monthly&lt;/td&gt;
+      &lt;td&gt;03/04/2012&lt;/td&gt;
+      &lt;td&gt;Pending&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;info&quot;&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;TB - Monthly&lt;/td&gt;
+      &lt;td&gt;04/04/2012&lt;/td&gt;
+      &lt;td&gt;Call in to confirm&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
               </div>
             </div>
             
