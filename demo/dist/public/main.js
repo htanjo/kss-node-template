@@ -37,7 +37,6 @@
         $('code.html').attr('data-language', 'html');
         $('code.css').attr('data-language', 'css');
         $('code.less, code.scss').attr('data-language', 'generic');
-        Rainbow.color();
 
     });
 }(jQuery));
