@@ -17,7 +17,8 @@ body {
   @text-color: #222;
   @key-color: #972;
   @border-color: #e3e3e3;
-  @sidebar-width: 240px;
+  @wrapper-width: 960px;
+  @sidebar-width: 220px;
 
   // Mixins
   .base-styles() {
@@ -28,6 +29,7 @@ body {
   .doc-styles() {
     .base-styles();
     line-height: 1.5;   // Override
+    word-wrap: break-word;
     font-size: 14px;
     h1,
     h2,
@@ -65,7 +67,6 @@ body {
     pre {
       display: block;
       margin: 15px 0;
-      word-wrap: break-word;
     }
     ul {
       list-style-type: square;
@@ -129,6 +130,7 @@ body {
   }
   .pre-styles() {
     white-space: pre;
+    word-wrap: normal;
   }
   .code-styles() {
     line-height: 1.5;
@@ -156,8 +158,9 @@ body {
   // Layout
   .kss-wrapper {
     .clearfix();
-    width: 950px;
+    width: @wrapper-width - 20px;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   // Sidebar
@@ -173,12 +176,9 @@ body {
     }
   }
 
-  // Title
-  .kss-header {
-    .base-styles();
-  }
-
+  // Document title
   .kss-doc-title {
+    .base-styles();
     margin: 0 0 30px;
     text-align: right;
     font-size: 20px;
@@ -192,39 +192,41 @@ body {
 
   // Menu
   .kss-nav {
-    .base-styles();
     margin: 30px 0;
-    font-size: 14px;
   }
 
   .kss-menu {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    > .kss-menu-item > a {
-      .clearfix();
-      display: block;
-      padding: 7px 0 7px 5px;
-      border-bottom: 1px solid @border-color;
-      text-decoration: none;
-      font-weight: bold;
-      color: #888;
-      &:hover {
-        color: @key-color;
+    > .kss-menu-item {
+      .base-styles();
+      font-size: 14px;
+      > a {
+        .clearfix();
+        display: block;
+        padding: 7px 0 7px 5px;
+        border-bottom: 1px solid @border-color;
+        text-decoration: none;
+        font-weight: bold;
+        color: #888;
+        &:hover {
+          color: @key-color;
+        }
+        > .kss-ref {
+          float: left;
+          margin-right: 10px;
+          color: @key-color;
+        }
+        > .kss-name {
+          .ellipsis();
+          text-align: right;
+        }
       }
-      > .kss-ref {
-        float: left;
-        margin-right: 10px;
-        color: @key-color;
+      &.kss-active > a {
+        border-bottom-color: @key-color;
+        color: @text-color;
       }
-      > .kss-name {
-        .ellipsis();
-        text-align: right;
-      }
-    }
-    > .kss-menu-item.kss-active > a {
-      border-bottom-color: @key-color;
-      color: @text-color;
     }
   }
 
@@ -234,27 +236,30 @@ body {
     padding: 5px 0;
     list-style-type: none;
     border-bottom: 1px solid @border-color;
-    font-size: 12px;
-    > .kss-menu-item > a {
-      display: block;
-      padding: 5px 0 6px 5px;
-      text-decoration: none;
-      color: #888;
-      &:hover {
-        color: @key-color;
+    > .kss-menu-item {
+      .base-styles();
+      font-size: 12px;
+      > a {
+        display: block;
+        padding: 5px 0 6px 5px;
+        text-decoration: none;
+        color: #888;
+        &:hover {
+          color: @key-color;
+        }
+        > .kss-ref {
+          float: left;
+          margin-right: 10px;
+          color: @key-color;
+        }
+        > .kss-name {
+          .ellipsis();
+          text-align: right;
+        }
       }
-      > .kss-ref {
-        float: left;
-        margin-right: 10px;
-        color: @key-color;
+      &.kss-active > a {
+        color: @text-color;
       }
-      > .kss-name {
-        .ellipsis();
-        text-align: right;
-      }
-    }
-    > .kss-menu-item.kss-active > a {
-      color: @text-color;
     }
   }
 
@@ -332,25 +337,25 @@ body {
   }
 
   .kss-modifier-example {
-    padding: 30px 25px 40px;
+    padding: 25px 20px 35px;
   }
   .kss-modifier-original {
     .kss-modifier-example {
-      padding-top: 40px;
+      padding-top: 35px;
     }
   }
 
   // Markup
   .kss-markup {
-    overflow: auto;
-    padding: 12px 15px;
-    border-top: 1px solid @border-color;
-    border-left: 2px solid @key-color;
-    border-right: 1px solid @border-color;
-    border-bottom: 1px solid @border-color;
     pre {
-      margin: 0;
       .pre-styles();
+      overflow: auto;
+      margin: 0;
+      padding: 12px 15px;
+      border-top: 1px solid @border-color;
+      border-left: 2px solid @key-color;
+      border-right: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
     }
     code {
       .code-styles();
@@ -385,4 +390,25 @@ body {
     font-size: 12px;
   }
 
+}
+
+// Responsive styles
+// -----------------
+
+// Large desctop
+@media (min-width: 1260px) {
+  #kss-node {
+    .kss-wrapper {
+      width: 1260px - 20px;
+    }
+  }
+}
+
+// Smartphone
+@media (max-device-width: 480px) {
+  #kss-node {
+    .kss-sidebar.kss-fixed {
+      position: static;
+    }
+  }
 }
