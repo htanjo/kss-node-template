@@ -29,6 +29,7 @@ body {
   .doc-styles() {
     .base-styles();
     line-height: 1.5;   // Override
+    word-wrap: break-word;
     font-size: 14px;
     h1,
     h2,
@@ -66,7 +67,6 @@ body {
     pre {
       display: block;
       margin: 15px 0;
-      word-wrap: break-word;
     }
     ul {
       list-style-type: square;
@@ -130,6 +130,7 @@ body {
   }
   .pre-styles() {
     white-space: pre;
+    word-wrap: normal;
   }
   .code-styles() {
     line-height: 1.5;
@@ -346,15 +347,15 @@ body {
 
   // Markup
   .kss-markup {
-    overflow: auto;
-    padding: 12px 15px;
-    border-top: 1px solid @border-color;
-    border-left: 2px solid @key-color;
-    border-right: 1px solid @border-color;
-    border-bottom: 1px solid @border-color;
     pre {
-      margin: 0;
       .pre-styles();
+      overflow: auto;
+      margin: 0;
+      padding: 12px 15px;
+      border-top: 1px solid @border-color;
+      border-left: 2px solid @key-color;
+      border-right: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
     }
     code {
       .code-styles();
