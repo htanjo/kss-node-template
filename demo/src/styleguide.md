@@ -69,13 +69,13 @@ Buttons
 
 A majority of buttons in the site are built from the same base class.
 
-Markup:
-<a href="#" class="button {$modifiers}">Link Button</a>
-<button class="button {$modifiers}">Button Element</button>
-
 :hovered    - Highlight the button when hovered.
 :disabled   - Make the button change appearance to reflect it being disabled.
 .primary    - Indicate that the button is the primary feature of this form.
+
+Markup:
+<a href="#" class="button {$modifiers}">Link Button</a>
+<button class="button {$modifiers}">Button Element</button>
 
 Styleguide 1.1
 */
@@ -101,13 +101,13 @@ You can use the `//` comment section for writing your document.
 //
 // A majority of buttons in the site are built from the same base class.
 //
-// Markup:
-// <a href="#" class="button {$modifiers}">Link Button</a>
-// <button class="button {$modifiers}">Button Element</button>
-//
 // :hovered    - Highlight the button when hovered.
 // :disabled   - Make the button change appearance to reflect it being disabled.
 // .primary    - Indicate that the button is the primary feature of this form.
+//
+// Markup:
+// <a href="#" class="button {$modifiers}">Link Button</a>
+// <button class="button {$modifiers}">Button Element</button>
 //
 // Styleguide 1.1
 .button {
@@ -129,8 +129,8 @@ From the top,
 
 1. Element's title
 2. Element's description
-3. HTML markup
-4. List of modifier classes or pseudo-classes
+3. List of modifier classes or pseudo-classes
+4. HTML markup
 5. Reference to the element's position in the styleguide
 
 And each description supports the Markdown writing.
