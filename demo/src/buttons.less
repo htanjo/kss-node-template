@@ -8,13 +8,13 @@
 
 // Base styles
 //
+// :hover       - Hover state.
+// :active      - Active state.
+// .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
+//
 // Markup:
 // <button type="submit" class="btn btn-primary {$modifiers}">Button</button>
 // <button type="submit" class="btn {$modifiers}">Button</button>
-//
-// :hover       - Hover state.
-// :active      - Active state.
-// .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute.
 //
 // Styleguide 1.1
 
@@ -79,14 +79,14 @@
 // Fancy larger or smaller buttons?
 // Add `.btn-large`, `.btn-small`, or `.btn-mini` for additional sizes.
 //
-// Markup:
-// <button type="submit" class="btn btn-primary {$modifiers}">Button</button>
-// <button type="submit" class="btn {$modifiers}">Button</button>
-//
 // .btn-large  - Large button.
 // .btn-smalll - Small button.
 // .btn-mini   - Mini button.
 // .btn-block  - Block level button.
+//
+// Markup:
+// <button type="submit" class="btn btn-primary {$modifiers}">Button</button>
+// <button type="submit" class="btn {$modifiers}">Button</button>
 //
 // Styleguide 1.3
 
@@ -154,12 +154,6 @@ input[type="button"] {
 //
 // Use the `.btn` class on an `<a>`, `<button>`, or `<input>` element.
 //
-// Markup:
-// <a href="#" class="btn {$modifiers}">Link</a>
-// <button type="submit" class="btn {$modifiers}">Button</button>
-// <input type="submit" class="btn {$modifiers}" value="Input:submit" />
-// <input type="button" class="btn {$modifiers}" value="Input:button" />
-//
 // .btn-primary   - Provides extra visual weight and identifies the primary action in a set of buttons.
 // .btn-info      - Used as an alternative to the default styles.
 // .btn-success   - Indicates a successful or positive action.
@@ -167,6 +161,12 @@ input[type="button"] {
 // .btn-danger    - Indicates a dangerous or potentially negative action.
 // .btn-inverse   - Alternate dark gray button, not tied to a semantic action or use.
 // .btn-link      - Deemphasize a button by making it look like a link while maintaining button behavior.
+//
+// Markup:
+// <a href="#" class="btn {$modifiers}">Link</a>
+// <button type="submit" class="btn {$modifiers}">Button</button>
+// <input type="submit" class="btn {$modifiers}" value="Input:submit" />
+// <input type="button" class="btn {$modifiers}" value="Input:button" />
 //
 // Styleguide 1.2
 

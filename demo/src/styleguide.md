@@ -6,6 +6,7 @@ This is a **template** for [kss-node](https://github.com/hughsk/kss-node) styleg
 kss-node enables us to generate a beatiful styleguide for CSS, of course that suports LESS, SASS and Stylus.
 
 You can see the example styleguide from the left navi.
+That is thanks to [Twitter Bootstrap](http://twitter.github.io/bootstrap/).
 
 
 Download
