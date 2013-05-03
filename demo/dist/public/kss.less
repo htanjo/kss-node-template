@@ -273,8 +273,8 @@ body {
     padding-top: 40px;
   }
 
-  // Markdown content
-  .kss-markdown {
+  // Overview content
+  .kss-overview {
     .doc-styles();
   }
 
@@ -291,6 +291,7 @@ body {
 
   // Description
   .kss-description {
+    .doc-styles();
     margin: 10px 0 20px;
   }
 
@@ -305,9 +306,20 @@ body {
   }
 
   .kss-modifier-head {
-    .base-styles();
+    .doc-styles();
     padding: 8px 0 0;
     font-size: 12px;
+    p,
+    ul,
+    ol,
+    blockquote,
+    pre {
+      margin: 0;
+    }
+    code {
+      font-size: 10px;
+      color: inherit;
+    }
     .kss-modifier-name {
       float: left;
       margin-right: 15px;
@@ -316,9 +328,6 @@ body {
     .kss-modifier-description {
       overflow: hidden;
       color: #888;
-      p {
-        margin: 0;
-      }
     }
   }
 

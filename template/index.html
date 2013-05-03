@@ -39,7 +39,7 @@
       <div class="kss-content">
         <article class="kss-article">
           {{#if overview}}
-          <section id="section-0" class="kss-section kss-overview kss-markdown">
+          <section id="section-0" class="kss-section kss-overview">
             {{html overview}}
           </section>
           {{else}}
@@ -48,7 +48,7 @@
             <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
             {{#ifAny markup modifiers}}
             {{#if description}}
-            <div class="kss-description kss-markdown">
+            <div class="kss-description">
               {{html description}}
             </div>
             {{/if}}
@@ -77,7 +77,7 @@
             </div>
             {{else}}
             {{#if description}}
-            <div class="kss-description kss-markdown">
+            <div class="kss-description">
               {{html description}}
             </div>
             {{/if}}
