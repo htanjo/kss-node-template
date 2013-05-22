@@ -49,8 +49,10 @@
         }
 
         // Sidebar position
-        fixSidebar();
-        $(window).resize(fixSidebar);
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            fixSidebar();
+            $(window).resize(fixSidebar);
+        }
 
         // Syntax hightlignting with Rainbow.js
         $('code.html').attr('data-language', 'html');
