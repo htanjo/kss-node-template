@@ -122,6 +122,7 @@ body {
       .code-styles();
       padding: 2px 3px;
       border: 1px solid @border-color;
+      vertical-align: 1px;
     }
     pre > code {
       padding: 0;
@@ -322,7 +323,8 @@ body {
       margin: 0;
     }
     code {
-      font-size: 10px;
+      font-size: 11px;
+      vertical-align: 1px;
       color: inherit;
     }
     .kss-modifier-name {
@@ -341,6 +343,7 @@ body {
   }
   .kss-modifier-original {
     .kss-modifier-example {
+      .clearfix();
       padding-top: 35px;
     }
   }
@@ -400,15 +403,6 @@ body {
   #kss-node {
     .kss-wrapper {
       width: 1260px - 20px;
-    }
-  }
-}
-
-// Smartphone
-@media (max-device-width: 480px) {
-  #kss-node {
-    .kss-sidebar.kss-fixed {
-      position: static;
     }
   }
 }
