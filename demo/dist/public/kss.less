@@ -171,10 +171,17 @@ body {
   .kss-sidebar {
     float: left;
     width: @sidebar-width;
-    padding: 40px 0 10px;
+    overflow: hidden;
     &.kss-fixed {
       position: fixed;
+      top: 0;
+      .kss-sidebar-inner {
+        padding-top: 40px + 4px;  // Keep border height
+      }
     }
+  }
+  .kss-sidebar-inner {
+    padding: 40px 0 10px;
   }
 
   // Document title
