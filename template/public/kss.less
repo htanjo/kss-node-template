@@ -120,7 +120,7 @@ body {
     }
     code {
       .code-styles();
-      padding: 2px 3px;
+      padding: 1px 2px;
       border: 1px solid @border-color;
       vertical-align: 1px;
     }
@@ -135,7 +135,7 @@ body {
   }
   .code-styles() {
     line-height: 1.5;
-    font-size: 12px;
+    font-size: 13px;
     font-family: Consolas, Menlo,'Liberation Mono', Courier, monospace;
     color: @text-color
   }
@@ -171,10 +171,17 @@ body {
   .kss-sidebar {
     float: left;
     width: @sidebar-width;
-    padding: 40px 0 10px;
+    overflow: hidden;
     &.kss-fixed {
       position: fixed;
+      top: 0;
+      .kss-sidebar-inner {
+        padding-top: 40px + 4px;  // Keep border height
+      }
     }
+  }
+  .kss-sidebar-inner {
+    padding: 40px 0 10px;
   }
 
   // Document title
@@ -269,6 +276,7 @@ body {
 
   // Content column
   .kss-content {
+    overflow: hidden;
     margin-left: @sidebar-width + 30px;
     padding: 40px 0 10px;
   }
@@ -324,7 +332,6 @@ body {
     }
     code {
       font-size: 11px;
-      vertical-align: 1px;
       color: inherit;
     }
     .kss-modifier-name {
