@@ -19,6 +19,7 @@ body {
   @border-color: #e3e3e3;
   @wrapper-width: 960px;
   @sidebar-width: 220px;
+  @code-font: Consolas, Menlo,'Liberation Mono', Courier, monospace;
 
   // Mixins
   .base-styles() {
@@ -136,7 +137,7 @@ body {
   .code-styles() {
     line-height: 1.5;
     font-size: 13px;
-    font-family: Consolas, Menlo,'Liberation Mono', Courier, monospace;
+    font-family: @code-font;
     color: @text-color
   }
   .clearfix() {
@@ -183,7 +184,10 @@ body {
   .kss-sidebar-inner {
     padding: 40px 0 10px;
   }
-
+  // Header
+  .kss-header {
+    background: #fff;
+  }
   // Document title
   .kss-doc-title {
     .base-styles();
@@ -210,6 +214,7 @@ body {
     > .kss-menu-item {
       .base-styles();
       font-size: 14px;
+      display: block;
       > a {
         .clearfix();
         display: block;
@@ -369,6 +374,9 @@ body {
     }
     code {
       .code-styles();
+      span {
+        font-family: @code-font;
+      }
     }
   }
 
