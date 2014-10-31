@@ -22,80 +22,49 @@
           <nav class="kss-nav">
             <ul class="kss-menu" data-kss-ref="0">
               <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
-              
               <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Buttons</span></a></li>
-              
               <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Tables</span></a></li>
-              
               <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Pagination</span></a></li>
-              
             </ul>
-            
-            
           </nav>
         </div>
       </div>
       <div class="kss-content">
         <article class="kss-article">
-          
           <section id="section-0" class="kss-section kss-overview">
-            <h1>kss-node-template</h1>
+             <h1 id="kss-node-template">kss-node-template</h1>
 <p>This is a <strong>template</strong> for <a href="https://github.com/hughsk/kss-node">kss-node</a> styleguide.
 &quot;kss-node&quot; is a NodeJS implementation of <a href="https://github.com/kneath/kss">Knyle Style Sheets</a> (KSS).
-kss-node enables us to generate a beatiful styleguide for CSS, of course that suports LESS, SASS and Stylus.
-
-</p>
+kss-node enables us to generate a beatiful styleguide for CSS, of course that suports LESS, SASS and Stylus.</p>
 <p>You can see the example styleguide from the left navi.
-That is thanks to <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>.
-
-
-</p>
-<h2>Download</h2>
-<p><strong><a href="https://github.com/htanjo/kss-node-template/archive/master.zip">kss-node-template</a></strong> [zip] or
-
-</p>
-<pre><code>git clone git://github.com/htanjo/kss-node-template.git</code></pre>
-<p><strong>Note:</strong> This package contains only template files.
-You have to install kss-node at first.
-
-
-</p>
-<h2>How to apply this template</h2>
+That is thanks to <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>.</p>
+<h2 id="download">Download</h2>
+<p><strong><a href="https://github.com/htanjo/kss-node-template/archive/master.zip">kss-node-template</a></strong> [zip] or</p>
+<pre><code>git clone git://github.com/htanjo/kss-node-template.git
+</code></pre><p><strong>Note:</strong> This package contains only template files.
+You have to install kss-node at first.</p>
+<h2 id="how-to-apply-this-template">How to apply this template</h2>
 <ol>
 <li>Install kss-node. Type <code>npm install kss</code> or <code>npm install -g kss</code> for global CLI.</li>
 <li>Download <a href="https://github.com/htanjo/kss-node-template/archive/master.zip">kss-node-template</a> and copy the &quot;template&quot; folder into your working directory.</li>
 <li>Run <code>kss-node</code> command with <code>--template</code> option, like below.</li>
 </ol>
-<pre><code>kss-node &lt;sourcedir&gt; --template path/to/template</code></pre>
-<h2>License</h2>
-<p>This template is under the <a href="https://github.com/htanjo/kss-node-template/blob/master/LICENSE">MIT License</a>.
-
-
-</p>
-<h1>kss-node quickstart</h1>
-<p>I introduce about kss-node briefly.
-
-</p>
+<pre><code>kss-node &lt;sourcedir&gt; --template path/to/template
+</code></pre><h2 id="license">License</h2>
+<p>This template is under the <a href="https://github.com/htanjo/kss-node-template/blob/master/LICENSE">MIT License</a>.</p>
+<h1 id="kss-node-quickstart">kss-node quickstart</h1>
+<p>I introduce about kss-node briefly.</p>
 <p>If you want to learn kss-node, please refer <a href="https://github.com/hughsk/kss-node">kss-node project page</a>.
-And also the original <a href="https://github.com/kneath/kss/blob/master/SPEC.md">KSS specification</a> may be helpful for writing your documentation.
-
-
-</p>
-<h2>Installation</h2>
+And also the original <a href="https://github.com/kneath/kss/blob/master/SPEC.md">KSS specification</a> may be helpful for writing your documentation.</p>
+<h2 id="installation">Installation</h2>
 <p>As kss-node is provided as a npm package, you can install by just typing <code>npm install kss</code>.
-If you want to use the command line interface, install it globally.
-
-</p>
-<pre><code>npm install -g kss</code></pre>
-<h2>Format</h2>
+If you want to use the command line interface, install it globally.</p>
+<pre><code>npm install -g kss
+</code></pre><h2 id="format">Format</h2>
 <p>kss-node is almost compatible with KSS documentation.
-But kss-node can depend on only comment in source code because it has <code>Markup:</code> directive for showing the sample markup.
-
-</p>
-<p>Here is a basic format for kss-node documentation.
-
-</p>
-<pre><code class="css">/*
+But kss-node can depend on only comment in source code because it has <code>Markup:</code> directive for showing the sample markup.</p>
+<p>Here is a basic format for kss-node documentation.</p>
+<pre><code class="lang-css">/*
 Buttons
 
 A majority of buttons in the site are built from the same base class.
@@ -121,12 +90,11 @@ Styleguide 1.1
 }
 .button.primary {
   ...
-}</code></pre>
+}
+</code></pre>
 <p>kss-node also supports CSS preprocessors such as LESS, SASS and Stylus.
-You can use the <code>//</code> comment section for writing your document.
-
-</p>
-<pre><code class="less">// Buttons
+You can use the <code>//</code> comment section for writing your document.</p>
+<pre><code class="lang-less">// Buttons
 //
 // A majority of buttons in the site are built from the same base class.
 //
@@ -150,33 +118,24 @@ You can use the <code>//</code> comment section for writing your document.
   .primary {
     ...
   }
-}</code></pre>
+}
+</code></pre>
 <p>As you see in the above samples, kss-node comment has some blocks.
-From the top,
-
-</p>
+From the top,</p>
 <ol>
-<li>Element&apos;s title</li>
-<li>Element&apos;s description</li>
+<li>Element&#39;s title</li>
+<li>Element&#39;s description</li>
 <li>List of modifier classes or pseudo-classes</li>
 <li>HTML markup</li>
-<li>Reference to the element&apos;s position in the styleguide</li>
+<li>Reference to the element&#39;s position in the styleguide</li>
 </ol>
-<p>And each description supports the Markdown writing.
-
-
-</p>
-<h2>More example code</h2>
+<p>And each description supports the Markdown writing.</p>
+<h2 id="more-example-code">More example code</h2>
 <p>This document is also created by using kss-node.
-You can see the source code in the <a href="https://github.com/htanjo/kss-node-template/tree/master/demo/src">demo directory</a>.
-
-
-</p>
-<p><a href="https://github.com/htanjo/kss-node-template"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-</p>
+You can see the source code in the <a href="https://github.com/htanjo/kss-node-template/tree/master/demo/src">demo directory</a>.</p>
+<p><a href="https://github.com/htanjo/kss-node-template"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a></p>
 
           </section>
-          
         </article>
         <footer class="kss-footer">
           <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
