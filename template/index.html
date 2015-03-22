@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="generator" content="kss-node" />
     <link rel="stylesheet" href="public/kss.css" />
-    <link rel="stylesheet" href="public/style.css" />
+    {{{styles}}}
     <!--[if lt IE 9]>
     <script src="public/html5shiv.js"></script>
     <![endif]-->
@@ -26,7 +26,7 @@
               <li class="kss-menu-item"><a href="section-{{reference}}.html"><span class="kss-ref">{{reference}}</span><span class="kss-name">{{header}}</span></a></li>
               {{/eachRoot}}
             </ul>
-            {{#if overview}}
+            {{#if homepage}}
             {{else}}
             <ul class="kss-menu-child">
               {{#eachSection rootName}}
@@ -42,9 +42,9 @@
       </div>
       <div class="kss-content">
         <article class="kss-article">
-          {{#if overview}}
+          {{#if homepage}}
           <section id="section-0" class="kss-section kss-overview">
-            {{{overview}}}
+            {{{homepage}}}
           </section>
           {{else}}
           {{#eachSection rootName}}
@@ -59,7 +59,7 @@
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  {{markup}}
+                  {{{markup}}}
                 </div>
               </div>
               {{#eachModifier}}
@@ -71,7 +71,7 @@
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  {{markup}}
+                  {{{markup}}}
                 </div>
               </div>
               {{/eachModifier}}

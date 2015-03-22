@@ -74,8 +74,8 @@ A majority of buttons in the site are built from the same base class.
 .primary    - Indicate that the button is the primary feature of this form.
 
 Markup:
-<a href="#" class="button {$modifiers}">Link Button</a>
-<button class="button {$modifiers}">Button Element</button>
+<a href="#" class="button {{modifier_class}}">Link Button</a>
+<button class="button {{modifier_class}}">Button Element</button>
 
 Styleguide 1.1
 */
@@ -106,8 +106,8 @@ You can use the `//` comment section for writing your document.
 // .primary    - Indicate that the button is the primary feature of this form.
 //
 // Markup:
-// <a href="#" class="button {$modifiers}">Link Button</a>
-// <button class="button {$modifiers}">Button Element</button>
+// <a href="#" class="button {{modifier_class}}">Link Button</a>
+// <button class="button {{modifier_class}}">Button Element</button>
 //
 // Styleguide 1.1
 .button {

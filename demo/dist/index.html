@@ -7,7 +7,8 @@
     <meta name="description" content="" />
     <meta name="generator" content="kss-node" />
     <link rel="stylesheet" href="public/kss.css" />
-    <link rel="stylesheet" href="public/style.css" />
+    <link rel="stylesheet" href="bootstrap.css">
+
     <!--[if lt IE 9]>
     <script src="public/html5shiv.js"></script>
     <![endif]-->
@@ -20,7 +21,7 @@
             <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
           </header>
           <nav class="kss-nav">
-            <ul class="kss-menu" data-kss-ref="0">
+            <ul class="kss-menu" data-kss-ref="styleguide.homepage">
               <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
               <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Buttons</span></a></li>
               <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Tables</span></a></li>
@@ -74,8 +75,8 @@ A majority of buttons in the site are built from the same base class.
 .primary    - Indicate that the button is the primary feature of this form.
 
 Markup:
-&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;button {{modifier_class}}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;button {{modifier_class}}&quot;&gt;Button Element&lt;/button&gt;
 
 Styleguide 1.1
 */
@@ -103,8 +104,8 @@ You can use the <code>//</code> comment section for writing your document.</p>
 // .primary    - Indicate that the button is the primary feature of this form.
 //
 // Markup:
-// &lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-// &lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+// &lt;a href=&quot;#&quot; class=&quot;button {{modifier_class}}&quot;&gt;Link Button&lt;/a&gt;
+// &lt;button class=&quot;button {{modifier_class}}&quot;&gt;Button Element&lt;/button&gt;
 //
 // Styleguide 1.1
 .button {
