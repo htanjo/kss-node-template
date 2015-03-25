@@ -1,0 +1,33 @@
+{
+  "name": "kss-node-template",
+  "version": "1.0.0-alpha",
+  "description": "Stylish template for kss-node.",
+  "author": "Tanjo, Hiroyuki",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/htanjo/kss-node-template/blob/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htanjo/kss-node-template.git"
+  },
+  "homepage": "http://htanjo.github.io/kss-node-template/",
+  "bugs": {
+    "url": "https://github.com/htanjo/kss-node-template/issues"
+  },
+  "keywords": [
+    "kss",
+    "kss-node",
+    "template",
+    "theme",
+    "design",
+    "style",
+    "styleguide",
+    "documentation",
+    "css"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "kss": "^2.0.2"
+  }
+}
