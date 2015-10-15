@@ -1,7 +1,7 @@
 kss-node-template
 =================
 
-This is a **template** for [kss-node](https://github.com/hughsk/kss-node) styleguide.
+This is a **template** for [kss-node](https://github.com/kss-node/kss-node) styleguide.
 "kss-node" is a NodeJS implementation of [Knyle Style Sheets](https://github.com/kneath/kss) (KSS).
 kss-node enables us to generate a beatiful styleguide for CSS, of course that suports LESS, SASS and Stylus.
 
@@ -42,7 +42,7 @@ kss-node quickstart
 
 I introduce about kss-node briefly.
 
-If you want to learn kss-node, please refer [kss-node project page](https://github.com/hughsk/kss-node).
+If you want to learn kss-node, please refer [kss-node project page](https://github.com/kss-node/kss-node).
 And also the original [KSS specification](https://github.com/kneath/kss/blob/master/SPEC.md) may be helpful for writing your documentation.
 
 
