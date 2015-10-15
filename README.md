@@ -43,4 +43,4 @@ kss-node <sourcedir> --template path/to/template
 
 License
 -------
-Copyright (c) 2015 Hiroyuki Tanjo. Licensed under the [MIT License](LICENSE).
+Copyright (c) 2013-2015 Hiroyuki Tanjo. Licensed under the [MIT License](LICENSE).
