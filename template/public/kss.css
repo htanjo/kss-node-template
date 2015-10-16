@@ -1,67 +1,131 @@
 body {
   margin: 0;
 }
-/**
- * GitHub theme
- *
- * @author Craig Campbell
- * @version 1.0.4
- */
-pre .comment {
-  color: #998;
-}
-pre .support {
-  color: #0086B3;
-}
-pre .tag,
-pre .tag-name {
-  color: navy;
-}
-pre .keyword,
-pre .css-property,
-pre .vendor-prefix,
-pre .sass,
-pre .class,
-pre .id,
-pre .css-value,
-pre .entity.function,
-pre .storage.function {
-  font-weight: bold;
-}
-pre .css-property,
-pre .css-value,
-pre .vendor-prefix,
-pre .support.namespace {
-  color: #333;
-}
-pre .constant.numeric,
-pre .keyword.unit,
-pre .hex-color {
-  font-weight: normal;
-  color: #099;
-}
-pre .entity.class {
-  color: #458;
-}
-pre .entity.id,
-pre .entity.function {
-  color: #900;
-}
-pre .attribute,
-pre .variable {
-  color: teal;
-}
-pre .string,
-pre .support.value {
-  font-weight: normal;
-  color: #d14;
-}
-pre .regexp {
-  color: #009926;
-}
 #kss-node {
-  border-top: 4px solid #997722;
+  /* Pretty printing styles. Used with prettify.js. */
+  /* SPAN elements with the classes below are added by prettyprint. */
+  /* plain text */
+  /* Use higher contrast and text-weight for printable form. */
+  /* Put a border around prettyprinted code snippets. */
+  /* Specify class=linenums on a pre to get line numbering */
+  /* IE indents via margin-left */
+  /* Alternate shading for lines */
+  border-top: 4px solid #972;
   background: #fff;
+}
+#kss-node .pln {
+  color: #000;
+}
+@media screen {
+  #kss-node {
+    /* string content */
+    /* a keyword */
+    /* a comment */
+    /* a type name */
+    /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    /* a markup tag name */
+    /* a markup attribute name */
+    /* a markup attribute value */
+    /* a declaration; a variable name */
+    /* a function name */
+  }
+  #kss-node .str {
+    color: #080;
+  }
+  #kss-node .kwd {
+    color: #008;
+  }
+  #kss-node .com {
+    color: #800;
+  }
+  #kss-node .typ {
+    color: #606;
+  }
+  #kss-node .lit {
+    color: #066;
+  }
+  #kss-node .pun,
+  #kss-node .opn,
+  #kss-node .clo {
+    color: #660;
+  }
+  #kss-node .tag {
+    color: #008;
+  }
+  #kss-node .atn {
+    color: #606;
+  }
+  #kss-node .atv {
+    color: #080;
+  }
+  #kss-node .dec,
+  #kss-node .var {
+    color: #606;
+  }
+  #kss-node .fun {
+    color: red;
+  }
+}
+@media print, projection {
+  #kss-node .str {
+    color: #060;
+  }
+  #kss-node .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  #kss-node .com {
+    color: #600;
+    font-style: italic;
+  }
+  #kss-node .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  #kss-node .lit {
+    color: #044;
+  }
+  #kss-node .pun,
+  #kss-node .opn,
+  #kss-node .clo {
+    color: #440;
+  }
+  #kss-node .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  #kss-node .atn {
+    color: #404;
+  }
+  #kss-node .atv {
+    color: #060;
+  }
+}
+#kss-node pre.prettyprint {
+  padding: 2px;
+  border: 1px solid #888;
+}
+#kss-node ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#kss-node li.L0,
+#kss-node li.L1,
+#kss-node li.L2,
+#kss-node li.L3,
+#kss-node li.L5,
+#kss-node li.L6,
+#kss-node li.L7,
+#kss-node li.L8 {
+  list-style-type: none;
+}
+#kss-node li.L1,
+#kss-node li.L3,
+#kss-node li.L5,
+#kss-node li.L7,
+#kss-node li.L9 {
+  background: #eee;
 }
 #kss-node .kss-wrapper {
   width: 940px;
@@ -97,12 +161,12 @@ pre .regexp {
 #kss-node .kss-doc-title {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   margin: 0 0 30px;
   text-align: right;
   font-size: 20px;
   font-weight: normal;
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-doc-title a {
   text-decoration: none;
@@ -119,7 +183,7 @@ pre .regexp {
 #kss-node .kss-menu > .kss-menu-item {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   font-size: 14px;
   display: block;
 }
@@ -140,12 +204,12 @@ pre .regexp {
   clear: both;
 }
 #kss-node .kss-menu > .kss-menu-item > a:hover {
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-menu > .kss-menu-item > a > .kss-ref {
   float: left;
   margin-right: 10px;
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-menu > .kss-menu-item > a > .kss-name {
   display: block;
@@ -155,8 +219,8 @@ pre .regexp {
   text-align: right;
 }
 #kss-node .kss-menu > .kss-menu-item.kss-active > a {
-  border-bottom-color: #997722;
-  color: #222222;
+  border-bottom-color: #972;
+  color: #222;
 }
 #kss-node .kss-menu-child {
   display: none;
@@ -168,7 +232,7 @@ pre .regexp {
 #kss-node .kss-menu-child > .kss-menu-item {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   font-size: 12px;
 }
 #kss-node .kss-menu-child > .kss-menu-item > a {
@@ -178,12 +242,12 @@ pre .regexp {
   color: #888;
 }
 #kss-node .kss-menu-child > .kss-menu-item > a:hover {
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-menu-child > .kss-menu-item > a > .kss-ref {
   float: left;
   margin-right: 10px;
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-menu-child > .kss-menu-item > a > .kss-name {
   display: block;
@@ -193,7 +257,7 @@ pre .regexp {
   text-align: right;
 }
 #kss-node .kss-menu-child > .kss-menu-item.kss-active > a {
-  color: #222222;
+  color: #222;
 }
 #kss-node .kss-content {
   overflow: hidden;
@@ -207,7 +271,7 @@ pre .regexp {
 #kss-node .kss-overview {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   line-height: 1.5;
   word-wrap: break-word;
   font-size: 14px;
@@ -304,7 +368,7 @@ pre .regexp {
   line-height: 1.5;
   font-size: 13px;
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
-  color: #222222;
+  color: #222;
   padding: 1px 2px;
   border: 1px solid #e3e3e3;
   vertical-align: 1px;
@@ -316,18 +380,18 @@ pre .regexp {
 #kss-node .kss-title {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   margin: 0 0 10px;
   font-weight: bold;
 }
 #kss-node .kss-title .kss-ref {
   margin-right: .2em;
-  color: #997722;
+  color: #972;
 }
 #kss-node .kss-description {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   line-height: 1.5;
   word-wrap: break-word;
   font-size: 14px;
@@ -425,7 +489,7 @@ pre .regexp {
   line-height: 1.5;
   font-size: 13px;
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
-  color: #222222;
+  color: #222;
   padding: 1px 2px;
   border: 1px solid #e3e3e3;
   vertical-align: 1px;
@@ -443,7 +507,7 @@ pre .regexp {
 #kss-node .kss-modifier-head {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   line-height: 1.5;
   word-wrap: break-word;
   font-size: 14px;
@@ -542,7 +606,7 @@ pre .regexp {
   line-height: 1.5;
   font-size: 13px;
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
-  color: #222222;
+  color: #222;
   padding: 1px 2px;
   border: 1px solid #e3e3e3;
   vertical-align: 1px;
@@ -592,7 +656,7 @@ pre .regexp {
   margin: 0;
   padding: 12px 15px;
   border-top: 1px solid #e3e3e3;
-  border-left: 2px solid #997722;
+  border-left: 2px solid #972;
   border-right: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
 }
@@ -600,7 +664,7 @@ pre .regexp {
   line-height: 1.5;
   font-size: 13px;
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
-  color: #222222;
+  color: #222;
 }
 #kss-node .kss-markup code span {
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
@@ -608,7 +672,7 @@ pre .regexp {
 #kss-node .kss-depth-1 .kss-title,
 #kss-node .kss-overview > h1:first-child {
   margin: -0.15em 0 20px;
-  border-bottom: 2px solid #997722;
+  border-bottom: 2px solid #972;
   font-size: 42px;
 }
 #kss-node .kss-depth-2 .kss-title,
@@ -621,7 +685,7 @@ pre .regexp {
 #kss-node .kss-footer {
   line-height: 1.3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222222;
+  color: #222;
   line-height: 1.5;
   word-wrap: break-word;
   font-size: 14px;
@@ -722,7 +786,7 @@ pre .regexp {
   line-height: 1.5;
   font-size: 13px;
   font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace;
-  color: #222222;
+  color: #222;
   padding: 1px 2px;
   border: 1px solid #e3e3e3;
   vertical-align: 1px;

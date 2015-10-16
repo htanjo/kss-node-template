@@ -83,10 +83,8 @@
             $window.on('resize', fixSidebar).trigger('resize');
         }
 
-        // Syntax hightlignting with Rainbow.js
-        $('code.html').attr('data-language', 'html');
-        $('code.css').attr('data-language', 'css');
-        $('code.less, code.scss').attr('data-language', 'generic');
+        // Syntax hightlignting with code-prettify
+        prettyPrint();
 
     });
 }(jQuery));
