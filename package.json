@@ -22,9 +22,14 @@
     "css"
   ],
   "scripts": {
-    "build": "kss-node demo/src demo/dist --template template --css bootstrap.css"
+    "build:css": "lessc template/public/kss.less template/public/kss.css",
+    "build:demo-css": "lessc demo/src/bootstrap.less demo/dist/bootstrap.css",
+    "build:demo-kss": "kss-node demo/src demo/dist --template template --css bootstrap.css",
+    "build:demo": "npm run build:demo-css && npm run build:demo-kss",
+    "build": "npm run build:css && npm run build:demo"
   },
   "devDependencies": {
-    "kss": "^2.0.2"
+    "kss": "^2.0.2",
+    "less": "^2.5.3"
   }
 }
