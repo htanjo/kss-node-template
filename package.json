@@ -29,7 +29,9 @@
     "build": "npm run build:css && npm run build:demo"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
     "kss": "^2.0.2",
-    "less": "^2.5.3"
+    "less": "^2.5.3",
+    "wiredep": "^2.2.2"
   }
 }
