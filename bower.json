@@ -1,0 +1,17 @@
+{
+  "name": "kss-node-template",
+  "version": "0.1.5",
+  "homepage": "https://github.com/izifortune/kss-node-template",
+  "authors": [
+    "Hiroyuki Tanjo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
